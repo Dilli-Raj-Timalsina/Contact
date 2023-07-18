@@ -22,35 +22,19 @@ const userSchema = new Schema({
             message: "wrong email format bro",
         },
     },
-    password: {
+    subject: {
         type: String,
-        unique: false,
-        required: false,
+        required: true,
     },
     contact: {
-        required: false,
+        required: true,
         type: Number,
     },
-    resetToken: {
-        type: tokenSchema,
-        default: () => ({}),
+    message:{
+required:true,
+type:String
     },
-    haveEnrolled: {
-        type: Boolean,
-        default: false,
-    },
-    paymentName: {
-        type: String,
-        required: false,
-    },
-    paymentEmail: {
-        type: String,
-        required: false,
-    },
-    paymentContact: {
-        type: String,
-        required: false,
-    },
+  
 });
 
 
