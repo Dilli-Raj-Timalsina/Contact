@@ -1,7 +1,7 @@
 const User = require("../models/contactModel");
 const { sendMailNormal } = require("../utils/email");
 //1:) logout user by putting jwt ==null in user's browser cookie
-const onSubmitControl = catchAsync(async (req, res, next) => {
+const onSubmitControl = async (req, res, next) => {
 
      //extract all user Information:
      const { name, email, subject, message, contact } = req.body;
@@ -22,7 +22,7 @@ const onSubmitControl = catchAsync(async (req, res, next) => {
 
     await User.update({...req.body});
     res.status(200).json({ status: "success" });
-});
+};
 
 module.exports = {
     onSubmitControl
