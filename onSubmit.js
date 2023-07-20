@@ -1,5 +1,5 @@
-const User = require("../models/contactModel");
-const { sendMailNormal } = require("../utils/email");
+const User = require("./models/contactModel");
+const { sendMailNormal } = require("./utils/email");
 //1:) logout user by putting jwt ==null in user's browser cookie
 const onSubmitControl = async (req, res, next) => {
 

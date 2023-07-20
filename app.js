@@ -5,6 +5,6 @@ const onSubmitControl=require("./onSubmit")
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-app.use("/api/contact",onSubmitControl );
+app.route("/api/contact",onSubmitControl );
 
 module.exports = app;
